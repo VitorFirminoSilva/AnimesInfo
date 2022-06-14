@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/flocort.ico" type="image/x-icon" />
+    <title>Anime Info</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/general.css">
+</head>
+<body>
+    <main>
+        <header>
+            <div class="navbar">
+                <a class="home" href="/">
+                    <img src="./img/logo.png" alt="Home Logo: Animes">
+                </a>
+                
+                <div class="menu-section">
+                    <div class="menu-toggle">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a onclick="callContent('home')">Home</a>
+                            </li>
+                            <li>
+                                <a onclick="callContent('culture')">Cultura</a>
+                            </li>
+                            <li>
+                                <a onclick="callContent('anime-list')">Lista de Animes</a>
+                            </li>
+                        
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
+        <section class="content-area">
+            <div class="content anime-list">
+
+                <ul class="alphabet-list">
+                    <li class="list-link active">
+                        <a class="link" href="#link-IN">#</a>
+                    </li>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-fluid">
+                <div class="list-inline">
+                    <ul class="content-footer">
+                        <li><a href="">Linkedin</a></li>
+                        <li><a href="">Github</a></li>
+                        <li><a href="">Reservado</a></li>
+                    </ul>
+                </div>
+                <div class="footer-copyright">
+                    <small>©2022 Copyright: AnimesLegais</small> 
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="./scripts/navbar-menu.js"></script>
+    <script src="./scripts/content-show.js"></script>
+    <script src="./scripts/anime-list.js"></script>
+
+</body>
+</html>
