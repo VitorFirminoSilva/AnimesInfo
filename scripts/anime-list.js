@@ -1,4 +1,5 @@
 var alphabet = [
+    ["#", "#link-IN", "active"],
     ["A", "#link-A"], 
     ["B", "#link-B"],  
     ["C", "#link-C"],
@@ -31,42 +32,33 @@ const anime_list =  document.querySelector(".anime-list");
 
 const alphabet_list = anime_list.querySelector(".alphabet-list");
 
-const list = alphabet_list.querySelector(".list-link");
+const letter = anime_list.querySelector(".input-group .anchor-letter");
 
 
 alphabet.map(element => {
-    const listClone = list.cloneNode(true)
-    listClone.setAttribute("class", "list-link");
-    const linkClone = listClone.querySelector(".link")
+    const listClone = document.createElement("li");
+    if(element[2] != undefined){
+        listClone.setAttribute("class", "list-link active");
+    }else{
+        listClone.setAttribute("class", "list-link");
+    }
+    
+    const linkClone = document.createElement("a");
     linkClone.setAttribute("class", "link");
     linkClone.setAttribute("href", element[1]);
     linkClone.innerHTML = element[0];
     linkClone.addEventListener("click", () => { 
         const actual_active = document.querySelectorAll(".list-link.active");
 
+       
         actual_active.forEach(element => {
             element.classList.toggle("active");
         })
         
         linkClone.parentNode.classList.toggle("active");
+        letter.innerHTML = element[0];
     });
 
+    listClone.appendChild(linkClone);
     alphabet_list.appendChild(listClone);
 });
-
-
-const get_list = alphabet_list.querySelector(".list-link");
-const get_link = get_list.querySelectorAll("link");
-
-console.log(get_link);
-
-/*get_link.map(
-
-    
-    element => { console.log(element);
-        element.addEventListener("click", () => {
-        
-       
-        
-    });
-});*/

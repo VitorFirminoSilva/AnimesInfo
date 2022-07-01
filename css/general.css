@@ -28,36 +28,47 @@ section.content-area .anime-list{
     color: var(--dark-color);
 }
 
-/*.alphabet-list{
-    display: flex;
-    flex-flow: wrap;
-    width: 80%;
-    margin: 20px auto;
-    justify-content: center;
-    gap: 5px
-
+.anime-list .input-group{
+    position: relative;
+    display: block;
+    width: 90%;
+    margin: 1.8rem auto;
 }
 
-.alphabet-list .list-link{ 
-    display:inline-block;
-    text-align:center;
-    letter-spacing: .1em;
-    transition: background-color .6s,  text-shadow .3s;
-    color: var(--dark-color);
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 2.8rem;
-    padding: 10px;
-    margin: 2px;
-   
-}
-
-.alphabet-list .list-link:hover{
+.anime-list .input-group .anchor-letter{
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    text-align: center;
     background-color: var(--primary-color);
-    border: 1px solid var(--dark-color-op26);
     border-radius: 5px;
-    text-shadow: 0 0 .65px #333, 0 0 .65px #333;
-}*/
+    font-weight: bold;
+    text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    padding-top: 0.5rem;
+    top: 10%;
+    left: 5px;
+}
+
+.anime-list .input-group .input-names{
+    padding: 5px;
+    width: 100%;
+    border: 2px solid var(--dark-color-op26);
+    border-radius: 5px;
+    font-size: 2.4rem;
+    padding-left: 50px;
+    text-align: center;
+}
+
+.anime-list .input-names:focus{
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 1px 6px 0 var(--primary-color);
+}
+
+
 
 .alphabet-list{
     display: flex;
